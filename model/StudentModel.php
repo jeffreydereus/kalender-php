@@ -35,10 +35,8 @@ function aaddbd()
     return;
 }
 
-function deleteR()
+function deleteR($id)
 {
-    if(isset($_GET['id']) && is_numeric($_GET['id'])) {
-        $id = $_GET['id'];
         $db = openDatabaseConnection();
 
         $sql = "DELETE FROM birthdays WHERE id= '$id'";
@@ -47,10 +45,6 @@ function deleteR()
 
         $db = null;
         header('Location:' . URL .  'home/index');
-
-    } else {
-        return;
-    }
 
 }
 

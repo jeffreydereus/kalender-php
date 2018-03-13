@@ -2,13 +2,13 @@
 
 require(ROOT . "model/StudentModel.php");
 
-//function index()
-//{
-//	render("student/index", array(
-//		'bday' => getAllBirthdays()
-//	));
-//
-//}
+function index()
+{
+	render("student/index", array(
+		'bday' => getAllBirthdays()
+	));
+
+}
 
 function addbirthday(){
     render("student/addbirthday"
@@ -16,8 +16,8 @@ function addbirthday(){
 }
 
 function delete(){
-    render("student/delete"
-    );
+    $id = $_GET['id'];
+    deleteR($id);
 }
 
 function update(){

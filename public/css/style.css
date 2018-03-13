@@ -64,10 +64,6 @@ h2 ~ p {    /* only applies to p-elements on the main page */
     left: 50px;     /* make sure the person names don't overlap the day number */
 }
 
-p:last-of-type {    /* the last p-element should act like a normal paragraph since it's not a person name */
-    position: static;
-}
-
 /*
     Set hyperlink styles.
 */
